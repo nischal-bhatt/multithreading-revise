@@ -15,6 +15,8 @@ class Process {
 		synchronized(this) {
 			System.out.println("consume method is executed");
 			notify();
+			//it is not going to notify immediately, we can make further operations
+			Thread.sleep(5000);
 		}
 	}
 	
